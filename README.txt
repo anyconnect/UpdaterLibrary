@@ -8,13 +8,13 @@ The steps to build and deploy your Updater Library are:
 
 What’s Included:
 
-- README		        Instructions to complete the Update.cpp stub functions and compile and use libupdater.so.
-- Update.h		      Updater library header file.  This derived class overrides UpdateService base class member functions.
-- Update.cpp		    Updater library source file.  You must complete the stub functions.
-- UpdateService.h	  These base class member functions are overridden by Update derived class.
+- README            Instructions to complete the Update.cpp stub functions and compile and use libupdater.so.
+- Update.h          Updater library header file.  This derived class overrides UpdateService base class member functions.
+- Update.cpp        Updater library source file.  You must complete the stub functions.
+- UpdateService.h   These base class member functions are overridden by Update derived class.
 - CMakeLists.txt    Compiles libupdater.so.
-- test/Test.h		    Test application header for libupdater.so.
-- test/Test.cpp		  Test application for libupdater.so.
+- test/Test.h       Test application header for libupdater.so.
+- test/Test.cpp     Test application for libupdater.so.
 - test/CMakeLists.txt   Compiles the test application.
 
 
