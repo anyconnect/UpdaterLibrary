@@ -1,4 +1,4 @@
-The AnyConnect Updater Plugin Library enables OTA firmware update, in conjunction with the AnyConnect Smarter Camera Platform.
+The AnyConnect Updater Plugin Library enables OTA firmware updates in conjunction with the AnyConnect Smarter Camera Platform.
 The steps to build and deploy your Updater Library are:
 
 1. Complete the stub functions in Update.cpp.
