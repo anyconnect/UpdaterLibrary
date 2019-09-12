@@ -19,3 +19,5 @@ ${CMAKE_CURRENT_SOURCE_DIR}
 add_executable(updatetest
 ${SOURCES}
 )
+
+target_link_libraries(updatetest dl)
