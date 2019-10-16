@@ -34,14 +34,14 @@ void Update::update(const std::string packageName, const std::string packageVers
 {
   // Write your code here to,
   // 1. download package/firmware.
-  // 2. integrity cheacking (md5sum/hash).
+  // 2. integrity checking (md5sum/hash).
   // 2. extracting the firmware.
   // 3. flashing and copying the package.
-  // Any error or any unexpected case, this function will execute the
+  // For any error or any unexpected case, this function will execute the
   // UpdateStatusHandler callback.
 }
 
-// Create and destroy the camera's Event library instance.
+// Create and destroy the camera's Updater library instance.
 extern "C" {
 Update* create() {
 	return new Update();
