@@ -74,7 +74,7 @@ public:
   /// \param[in] packageVersion - version of the downloadable package/firmware.
   /// \param[in] installedVersion - version of the currently installed package/firmware.
   /// \param[in] updatePriority - priority of the update (RECOMMENDED, MANDATORY, UNRECOGNIZED).
-  /// \param[in] userdata - Additional userdata required to check update requirememt.
+  /// \param[in] userdata - Additional userdata required to check update requirement.
   /// \param[out] TRUE/FALSE - true if update requires, otherwise false.
   ///
   virtual bool checkUpdateRequirement(const std::string packageName, const std::string packageVersion, const std::string installedVersion, UpdatePriority updatePriority, const Userdata& userdata) = 0;
