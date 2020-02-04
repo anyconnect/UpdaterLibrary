@@ -11,7 +11,7 @@ class Update: public UpdateService {
 public:
   Update();
   virtual ~Update();
-  bool checkUpdateRequirement(const std::string packageName, const std::string packageVersion, const std::string installedVersion, UpdatePriority updatePriority);
+  bool checkUpdateRequirement(const std::string packageName, const std::string packageVersion, const std::string installedVersion, UpdatePriority updatePriority, const Userdata& userdata);
   void setUpdateStatusCallback(UpdateStatusHandler handler);
   void update(const std::string packageName, const std::string packageVersion, const std::string url, credential cred);
 private:

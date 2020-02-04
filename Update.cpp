@@ -13,14 +13,14 @@ Update::~Update()
   // Write your de-initialization code.
 }
 
-bool Update::checkUpdateRequirement(const std::string packageName, const std::string packageVersion, const std::string installedVersion, UpdatePriority updatePriority)
+bool Update::checkUpdateRequirement(const std::string packageName, const std::string packageVersion, const std::string installedVersion, UpdatePriority updatePriority, const Userdata& userdata)
 {
   bool status = false;
   // Fill this function with the version checking code.
   // This function will return true, if update requires.
   // Note that, it is expected that the Updater Library itself will
   // manage a version information history in some local storage for integrity.
-  
+
   return status;
 }
 
