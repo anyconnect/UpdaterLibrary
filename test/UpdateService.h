@@ -1,6 +1,7 @@
 #ifndef _UPDATE_SERVICE_H_
 #define _UPDATE_SERVICE_H_
 
+#include <map>
 #include <string>
 #include <vector>
 #include <functional>
@@ -13,7 +14,7 @@ namespace update {
 /// \brief Update status.
 ///
 ///
-enum class UpdateStatus { 
+enum class UpdateStatus {
   SUCCESS,
   INPROGRESS,
   INTERRUPTED,
@@ -35,7 +36,7 @@ enum class UpdatePriority {
 
 
 ///
-/// \brief structure for authentication 
+/// \brief structure for authentication
 /// credentials for the download URL.
 ///
 
@@ -45,6 +46,10 @@ struct credential {
   std::string token;
 };
 
+///
+/// Data structure to provide user's custom data in key-value form.
+///
+typedef std::map<std::string, std::string> Userdata;
 
 ///
 /// Handler for update status.
@@ -61,7 +66,7 @@ public:
   {
     ;
   }
-  
+
   ///
   /// Returns true if the firmware or package update requires.
   ///
@@ -69,10 +74,11 @@ public:
   /// \param[in] packageVersion - version of the downloadable package/firmware.
   /// \param[in] installedVersion - version of the currently installed package/firmware.
   /// \param[in] updatePriority - priority of the update (RECOMMENDED, MANDATORY, UNRECOGNIZED).
+  /// \param[in] userdata - Additional userdata required to check update requirement.
   /// \param[out] TRUE/FALSE - true if update requires, otherwise false.
   ///
-  virtual bool checkUpdateRequirement(const std::string packageName, const std::string packageVersion, const std::string installedVersion, UpdatePriority updatePriority) = 0;
-  
+  virtual bool checkUpdateRequirement(const std::string packageName, const std::string packageVersion, const std::string installedVersion, UpdatePriority updatePriority, const Userdata& userdata) = 0;
+
   ///
   /// Set a callback for receiving status of the requested update.
   ///
